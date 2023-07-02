@@ -33,8 +33,8 @@ function numToString(num) {
     return str.length === 1 ? `0${str}` : str;
 }
 
-const pathSource = '/home/arturas/IdeaProjects/locke/01 Of Ideas in general, and their Original';
-const pathDestination = '/home/arturas/Downloads/locke/01';
+const pathSource = '/home/arturas/IdeaProjects/locke/11 Of Discerning';
+const pathDestination = '/home/arturas/Downloads/locke/11';
 
 let directories = fs.readdirSync(pathSource);
 for ( let i = 0; i < directories.length; i++ )
@@ -45,8 +45,8 @@ for ( let i = 0; i < directories.length; i++ )
     const en = fs.readFileSync(filePathEn, 'utf8');
     const ru = fs.readFileSync(filePathRu, 'utf8');
 
-    save( 'en', `${pathDestination}/${dir}`, `en${numToString(i)}.mp3`, en );
-    save( 'ru', `${pathDestination}/${dir}`, `ru${numToString(i)}.mp3`, ru );
+    save( 'en', `${pathDestination}/${dir}`, `en${numToString(i+1)}.mp3`, en );
+    save( 'ru', `${pathDestination}/${dir}`, `ru${numToString(i+1)}.mp3`, ru );
     // console.log(ru);
     // console.log( filePathEn );
 } // end for i
